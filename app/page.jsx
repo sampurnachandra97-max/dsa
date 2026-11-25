@@ -87,7 +87,7 @@ function Workspace({ problem, data, update, toggle, close }) {
     }
   }
   return <dialog ref={dialog} className="workspace" aria-label="Practice workspace" onCancel={close}>
-    <header className="workspace-header"><strong><Icon name="logo" /> Practice workspace</strong><button className="icon-button" onClick={close} aria-label="Close workspace"><Icon name="close" /></button></header>
+    <header className="workspace-header"><strong><img src="/algolab-mark.svg" alt="" width={22} height={22} /> Practice workspace</strong><button className="icon-button" onClick={close} aria-label="Close workspace"><Icon name="close" /></button></header>
     <div className="workspace-grid">
       <section className="description">
         <div className="problem-meta"><span className={'level ' + problem.level.toLowerCase()}>{problem.level}</span><span className="topic-label">{problem.topic}</span></div>
@@ -162,7 +162,7 @@ export default function Home() {
   const nextProblem = problems.find(p => !isSolved(p.id)) ?? problems[0];
   return <div className="shell">
     <aside className="sidebar">
-      <button className="brand" onClick={() => navigate('Problems')}><span className="brand-icon"><Icon name="logo" size={20} /></span>Algo<span>Lab</span></button>
+      <button className="brand" onClick={() => navigate('Problems')}><img className="brand-icon" src="/algolab-mark.svg" alt="" width={36} height={36} /><span className="wordmark">Algo<span>Lab</span></span></button>
       <div className="nav-label">WORKSPACE</div>
       <nav aria-label="Workspace">
         {[['Problems', 'grid'], ['Bookmarks', 'bookmark'], ['Progress', 'chart']].map(([name, icon]) => <button key={name} className={section === name ? 'nav active' : 'nav'} aria-current={section === name ? 'page' : undefined} onClick={() => navigate(name)}><Icon name={icon} />{name}</button>)}
