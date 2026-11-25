@@ -144,3 +144,69 @@ table{min-width:530px}}
 .hero p{font-size:14px}
 .hero-art{opacity:.38}
 .stat-icon{display:none}}
+
+.practice-workspace{width:min(1180px,calc(100% - 30px))}
+.practice-workspace .workspace-grid{grid-template-columns:minmax(0,2fr) minmax(0,3fr)}
+.practice-workspace .editor>textarea{min-height:225px;flex:1 0 225px}
+.practice-editor-header,.stdin-header,.runtime-control{display:flex;align-items:center;gap:9px}
+.runtime-control label,.stdin-header label{font-size:13px;font-weight:700;color:var(--text)}
+.runtime-control select,.stdin-header select{max-width:175px;padding:5px 9px;border:1px solid var(--border);border-radius:7px;background:var(--panel);color:var(--text);font-size:13px}
+.editor-tool{display:inline-flex;align-items:center;gap:5px;padding:4px 8px;font-size:13px;color:var(--accent);background:transparent;border:1px solid transparent;border-radius:6px}
+.editor-tool:hover{background:var(--active)}
+.stdin-panel{padding:10px 14px;border-top:1px solid var(--border)}
+.stdin-header{flex-wrap:wrap;margin-bottom:7px}
+.stdin-header label{margin-right:auto}.stdin-header label span,.stdin-panel p{color:var(--muted);font-weight:400}
+.stdin-panel textarea{min-height:55px;padding:7px 9px;border:1px solid var(--border);border-radius:7px;font-size:13px}
+.stdin-panel p{margin:5px 0 0;font-size:12px}
+.terminal{margin:0 14px 12px;background:#241e26;color:#fbf0f7;border:1px solid #473645;border-radius:9px;overflow:hidden}
+.terminal-bar{padding:7px 10px;display:flex;align-items:center;justify-content:space-between;background:#322733;border-bottom:1px solid #473645;font-size:13px}
+.terminal-bar strong{display:flex;align-items:center;gap:7px}
+.terminal-bar strong span{color:#efafd0;font:700 15px ui-monospace,monospace}
+.terminal-bar button{background:none;border:1px solid transparent;color:#e2cdde;border-radius:5px;font-size:12px;padding:2px 6px}
+.terminal-bar button:hover:enabled{border-color:#a8879f}
+.terminal-output{min-height:100px;max-height:215px;overflow:auto;padding:10px 13px;font:13px/1.55 ui-monospace,monospace;overflow-wrap:anywhere;user-select:text}
+.terminal-output p,.terminal-output pre{margin:0 0 5px}
+.terminal-output pre{white-space:pre-wrap;font:inherit}
+.terminal-output div+div{margin-top:7px}
+.terminal-label{color:#efafd0;font-size:12px}.terminal-dim{color:#cdbdca}.terminal-error{color:#ffb7bd}.terminal-pass{color:#a6ecc9}
+.practice-editor-footer{flex-wrap:wrap}
+.practice-editor-footer>span{margin-right:auto;color:var(--muted);font-size:12px}
+.leetcode-actions{margin-top:20px;display:flex;flex-wrap:wrap;gap:7px;align-items:center}
+.leetcode-actions a{text-decoration:none}.leetcode-actions>span{font-size:13px;color:var(--muted)}
+@media(max-width:760px){.practice-workspace .workspace-grid{grid-template-columns:minmax(0,1fr)}.practice-editor-footer>span{width:100%}}
+@media(max-width:420px){.practice-editor-header{flex-wrap:wrap}.runtime-control select{max-width:145px}.practice-editor-footer{padding-inline:10px}}
+.description .leetcode-note{font-size:13px;margin:7px 0 0}
+
+.problem-shell{display:block}
+.problem-topbar{padding:11px max(20px,calc((100vw - 1480px)/2));background:var(--side)}
+.problem-topbar a,.problem-link,.hero .primary{text-decoration:none}
+main.practice-workspace{width:100%;max-width:1480px;margin:0 auto;padding:18px;gap:16px;align-items:start}
+.practice-workspace .description,.practice-workspace .editor{border:1px solid var(--border);background:var(--panel);border-radius:12px;overflow:hidden}
+.practice-workspace .description{height:100%}
+.description h1{font-size:clamp(23px,3vw,31px);letter-spacing:-.04em;line-height:1.15;margin:12px 0 8px}
+.code-editor{min-width:0;background:#282c34;color:#edf1fa}
+.code-editor .cm-editor{min-height:260px;max-height:460px}
+.code-editor .cm-scroller{font:14px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace}
+.code-editor .cm-content,.code-editor .cm-gutter{padding:10px 0}
+.code-editor .cm-focused{outline:2px solid #ad6d8f;outline-offset:-2px}
+.practice-workspace .terminal{margin-top:11px}
+.course-header h1{margin:0;font-size:clamp(28px,4vw,42px);line-height:1.1;letter-spacing:-.055em}
+.course-header p{margin:9px 0 20px;color:var(--muted)}
+.course-units{display:grid;gap:12px}
+.course-unit{border:1px solid var(--border);border-radius:12px;background:var(--panel);overflow:hidden}
+.course-unit summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:15px 17px;background:var(--field)}
+.course-unit summary::-webkit-details-marker{display:none}
+.course-unit summary::before{content:'';border:solid var(--accent);border-width:0 1.5px 1.5px 0;padding:4px;transform:rotate(-45deg);margin-right:2px}
+.course-unit[open] summary::before{transform:rotate(45deg)}
+.course-unit summary strong,.course-unit summary div span{display:block}
+.course-unit summary div span{font-size:14px;color:var(--muted)}
+.course-hours{margin-left:auto;font-size:13px;color:var(--accent);white-space:nowrap}
+.course-sections{display:grid;gap:0;padding:2px 17px}
+.course-module{padding:14px 0 16px}
+.course-module+.course-module{border-top:1px solid var(--border)}
+.course-module h2{font-size:19px;letter-spacing:-.02em;margin:0 0 8px}
+.course-topics{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(185px,100%),1fr));gap:4px 23px;margin:0;padding-left:18px;color:var(--muted);font-size:14px}
+.course-practice h3{font-size:13px;margin:11px 0 3px}
+.course-practice ul{list-style:none;padding:0;margin:0;display:flex;gap:5px 13px;flex-wrap:wrap}
+.course-practice a{font-size:14px;color:var(--accent)}
+@media(max-width:760px){main.practice-workspace{padding:12px;gap:10px}.practice-workspace .description{height:auto}.sidebar nav{flex-wrap:wrap}}
